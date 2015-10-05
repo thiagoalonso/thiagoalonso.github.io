@@ -8,3 +8,18 @@ html, body {
 html {
   height: auto;
 }
+#content {
+    margin: auto;
+}
+section.soon {
+    text-align: center;
+    padding: 35px;
+    background-color: #fafafa;
+    margin: auto;
+    border-radius: 0px;
+}
+section.soon h1 {
+    margin: 0;
+    font-weight: 100;
+    font-size: 52px;
+}
