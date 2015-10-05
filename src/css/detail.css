@@ -1,0 +1,14 @@
+/* Toolbar area */
+md-toolbar img {
+  margin: auto;
+}
+md-toolbar .back-icon .md-button {
+  line-height: 50px;
+}
+
+/* Sections */
+section.section-detail .section-wrapper {
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}

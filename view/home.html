@@ -1,0 +1,39 @@
+<div layout="row" class="toolbar-wrapper">
+  <div flex=25 layout="row">
+    <div class="main-img">
+      <img src="src/img/arkmeds_logo.png" alt="Arkmeds">
+    </div>
+  </div>
+  <div flex=50 layout="row" class="search">
+      <div class="icon-wrapper">
+        <md-icon md-svg-src="src/svg/magnify.svg"></md-icon>
+      </div>
+      <input ng-model="searchField" placeholder="Search">
+  </div>
+  <div flex=25></div>
+</div>
+
+<div layout="row" class="content">
+  <md-content flex=70 offset=15 layout="column" id="content">
+
+    <section flex class="section-cards">
+      <div layout-gt-sm="row" layout-sm="column" class="card-line">
+
+          <a flex-gt-md=25 ng-repeat="device in devices | filter:searchField" href="#/detail/{{ device.device }}" aria-label="hu3">
+            <md-card>
+              <img src="https://cf.dropboxstatic.com/static/images/index/animation-strips/posters/hero-poster-vfl1gZOAd.png" class="md-card-image">
+              <md-card-content layout="column">
+                <h2 flex=40 class="md-title">{{ device.device }}</h2>
+                <div flex=60 layout="row" class="data">
+                  <span flex=60>Temperature: {{ device.values[0].value }}º C</span>
+                  <span flex=40>Media: {{ device.average }}º C</span>
+                </div>
+              </md-card-content>
+            </md-card>
+          </a>
+
+      </div>
+    </section>
+
+  </md-content>
+</div>

@@ -1,0 +1,32 @@
+<md-toolbar layout-padding class="md-whiteframe-z1 md-default-theme">
+  <img src="src/img/arkmeds_logo.png" alt="">
+</md-toolbar>
+
+<md-content flex layout="column" id="content">
+  <section flex class="section-info">
+    <div layout="row" class="products">
+      <div class="main-img">
+        <img src="https://cf.dropboxstatic.com/static/images/index/animation-strips/posters/hero-poster-vfl1gZOAd.png">
+      </div>
+    </div>
+    <div layout="column">
+      <div flex-sm=90 flex-gt-sm=80 layout-sm="column" layout-gt-sm="row" class="wrapper">
+        <div flex-gt-sm=70 class="main-header">
+          <h1>{{ mainTitle }}</h1>
+        </div>
+        <div flex-gt-sm=30 class="login-fields">
+
+          <md-input-container>
+            <label>Email</label>
+            <input required ng-model="user.email">
+          </md-input-container>
+          <md-input-container>
+            <label>Password</label>
+            <input required ng-model="user.password" type="password">
+          </md-input-container>
+          <md-button ng-click="loginUser(user)" class="md-raised md-primary">Login</md-button>
+        </div>
+      </div>
+    </div>
+  </section>
+</md-content>
